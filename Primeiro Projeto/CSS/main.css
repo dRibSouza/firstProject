@@ -1,0 +1,362 @@
+main{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    min-width: none;
+    
+}
+body{
+    max-width: 100%;
+    min-width: none;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+
+}
+/* header inicio*/
+header{
+    position: fixed;
+   margin: 0 auto;
+    width: 100%;
+    height: 140px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    transition: 0.6s ease;
+    background: #ececec;
+    
+}
+header.sticky{
+    background: #ad4259;
+    padding: 15px 100px;
+    height: 70px;
+}
+header .brand{
+    color:#000;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+header .brand.sticky{
+  
+        position:relative;
+        animation: gira 1.0s linear ;
+        transition: 0.6s ease;
+}
+@keyframes gira {
+    0% { transform:rotate(0deg); }
+	50% { transform:rotate(180deg); }
+	100% { transform:rotate(360deg); }
+}
+
+header .menu{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header .menu a {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 30px;
+    padding: 0 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: color, background;
+}
+
+header .menu a:hover{
+    color: #fff;
+    background: rgba(246, 63, 97, 0.8) ;
+}
+
+header .botao{
+    color: #000;
+    font-size: 25px;
+    cursor: pointer;
+    display:none;
+}
+
+
+@media (max-width: 1200px){
+    header .botao{
+        display: block;
+    }
+
+    header .menu{
+        position: fixed;
+        background: #9e394f;
+        flex-direction: column;
+        min-width: 400px;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        padding: 80px 50px;
+        transition: 0.5s;
+        transition-property: right;
+    }
+
+    header .menu.ativo{
+        right: 0;
+    }
+
+    header .menu .close-btn{
+        position: absolute;
+        top: 0;
+        left:0;
+        margin: 25px;
+    }
+    header .menu a{
+        display: block;
+        font-size: 20px;
+        margin: 20px;
+        padding: 0 15px;
+    }
+}
+#telefone{
+    background-color: #f86a42 ;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 17.5px;
+    border-radius: 3px;
+    padding: 15px;
+   
+    transition: 1s ;
+}
+/* header fim*/
+
+/* banner inicio*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins", sans-serif;
+}
+
+
+.img_slider{
+    position: relative;
+    width: 204.9vh;
+    height: 60vh;
+    margin: 0 auto;
+    margin-top: 140px;
+    padding-bottom: 10px;
+    transition: 0.6 ease;
+    
+}
+.img_slider.sticky {
+    position: relative;
+    width: 205vh;
+    height: 60vh;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding-bottom: 10px;
+    
+}
+
+.img_slider .slide{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 50% 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img_slider .slide.active{
+    clip-path: circle(150% at 50% 50%);
+    transition: 2s;
+    transition-property: clip-path;
+}
+.img_slider .slide img{
+    z-index: 1;
+    width: 100%;
+}
+.img_slider .slide .info{
+    position:absolute;
+    z-index: 900;
+    padding: 15px 30px;
+    
+}
+.img_slider .slide .info h2{
+    color: #000;
+    font-size: 4.9vh;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    
+}
+.img_slider .slide .info p{
+    color: #000;
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 1.7vh;
+    width: 60%;
+    padding: 10px;
+    border-radius: 4px;
+    
+}
+.proximo{
+    left: 80%;
+}
+.anterior{
+    left: 20%;
+}
+
+.img_slider .navigation{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.img_slider .navigation .btn {
+    background: rgba(0,0,0,0.3);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.img_slider .navigation .btn.active{
+    background: #4d4d4d ;
+    box-shadow:0 0 2px rgba(0, 0, 0, 0.5);
+}
+.img_slider .navigation .btn:hover{
+    background: rgba(173, 66, 89,0.7);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+
+/* aqui termina o banner*/
+/* inicio informações*/
+.container{
+    padding-top:40px ;
+    display: grid;
+    height: 480px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    grid-template-columns: 430px 430px;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+}
+#empresa{
+    color: #f86a42;
+    font-size: 19px;
+}
+.titulo{
+    grid-column: 1/3;
+}
+.botao_saiba{
+    justify-self: center;
+}
+.botao_saiba a{
+    text-decoration: none;
+    background-color: rgba(250, 174, 0, 0.7) ;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 17.5px;
+    border-radius: 3px;
+    width: 137px;
+}
+.botao_saiba a:hover{
+    text-decoration: none;
+    background-color: faae00 ;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 17.5px;
+    border-radius: 3px;
+    width: 137px;
+}
+.botao_veja{
+    justify-self: center;
+    
+}
+
+.sobre_texto{
+    justify-self: left;
+    width: 100%;
+}
+.container2 {
+    display: grid;
+    
+    grid-template-rows: auto auto;
+    width: 99%;
+   
+}
+.container3 {
+    display: grid;
+    grid-template-rows: auto auto;
+    width: 99.50%;
+   
+}
+footer{
+    position: relative;
+    top: 10px;
+    margin: 10 auto;
+    background-color: #ececec ;
+    height: 105px;
+    color: #525252;
+    width: 100%;
+}
+#container{
+    width:856px;
+    height: 105px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-1{
+    
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.equipe{
+    display: none;
+    position: relative;
+    height: 207px;
+    margin: 10px auto;
+    width: 856px;
+}
+
+#veja-botao{
+    background-color: rgba(250, 174, 0, 0.7) ;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 17.5px;
+    border-radius: 3px;
+    width: auto;
+    border: none;
+    cursor: pointer;
+}
+#veja-botao:hover{
+    background-color: #faae00;
+}
+
+/*fim informações*/

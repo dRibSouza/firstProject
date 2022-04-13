@@ -1,0 +1,136 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glory:wght@200&display=swap" rel="stylesheet">
+
+    <title>Prova FG</title>
+
+</head>
+
+<body>
+
+    <section class="espaco-header">
+        <header id="home">
+            <a href="#" class="brand"><img id="imagem_logo" src="./IMG/logo.png" alt="Logo da Empresa"></a>
+            <div class="menu">
+                <div class="botao">
+                    <i class="fas fa-times close-btn"></i>
+                </div>
+                <a href="#">HOME</a>
+                <a href="#empresa">EMPRESA</a>
+                <a href="#contatos">CONTATO</a>
+                <a id="telefone">(16) 99999-9999</a>
+            </div>
+            <div class="botao">
+                <i class="fas fa-bars menu-btn"></i>
+            </div>
+
+        </header>
+    </section>
+    <main>
+
+        <div class="img_slider">
+
+            <div class="slide active">
+
+
+                <img src="./IMG/img/s1.png" alt="imagem 1">
+                <div class="info">
+                    <h2>50 ANOS DE MERCADO</h2>
+                    <!--<p>texto sobre a imagem, caso necessário</p>-->
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="./IMG/img/s2.png" alt="imagem 2">
+                <div class="info">
+                    <h2>INOVAÇÃO</h2>
+                    <!--<p>texto sobre a imagem, caso necessário</p>-->
+                </div>
+            </div>
+
+            <div class="slide">
+
+                <img src="./IMG/img/s3.png" alt="imagem 3">
+                <div class="info">
+                    <h2>DIVERSIDADE</h2>
+                    <!--<p>texto sobre a imagem, caso necessário</p>-->
+                </div>
+
+
+            </div>
+
+            <div class="navigation">
+                <div class="btn active"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+            </div>
+        </div>
+</body>
+</main>
+<main>
+    <div class="description container">
+        <div id="empresa" class="titulo"><strong>A EMPRESA</strong></div>
+        <div class="column-grid"><img src="./IMG/imagem_empresa.png" alt="Imagem que representa a empresa"></div>
+        <div class="column-grid container2">
+            <p class="sobre_texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis nisi dolor.
+                Quisque porttitor
+                ipsum
+                ut hendrerit lobortis. Vestibulum mi velit, placerat vel lectus aliquam, molestie sagittis nibh.
+                Cras
+                nec tincidunt nisl. Curabitur pulvinar mi leo, ac semper enim consequat luctus. Pellentesque lacinia
+                sem
+                in sapien tempor dapibus. Aenean hendrerit augue ac ligula sollicitudin varius. Suspendisse posuere
+                varius pellentesque</p>
+            <div class="botao_saiba"><a href="https://www.google.com/" target="_blank">
+                    SAIBA MAIS »
+                </a>
+            </div>
+        </div>
+        <div class="titulo container3">
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur
+                fringilla viverra ultricies. Quisque ac congue nisi. Pellentesque et enim et lorem lobortis aliquet.
+                In sodales lacus ut velit tempus tempor. Fusce mi purus, laoreet vitae justo commodo, bibendum
+                sodales massa</p>
+            <div class="botao_veja">
+                <input type="button" value="VEJA NOSSA EQUIPE ⇓" id="veja-botao" onClick="mostrar('equipe')">
+            </div>
+
+        </div>
+    </div>
+    <div id="equipe" class="equipe">
+        <img src="./IMG/foto-equipe.png">
+        <img src="./IMG/foto-equipe.png">
+        <img src="./IMG/foto-equipe.png">
+    </div>
+</main>
+<footer id="contatos">
+    <div id="container">
+        <div class="footer-1">
+            <div>Genérica, 123<br>Centro - Santo André
+            </div>
+        </div>
+        <div class="footer-1">
+            <div><strong>contato@empresax.com.br</strong></div>
+        </div>
+        <div class="footer-1">
+            <div> +55 16 99999-9999</div>
+        </div>
+    </div>
+
+</footer>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="./js/main.js"></script>
+</body>
+
+</html>
